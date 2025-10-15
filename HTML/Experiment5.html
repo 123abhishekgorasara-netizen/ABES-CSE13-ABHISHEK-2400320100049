@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form</title>
+</head>
+<body>
+  <h2>Registration Form</h2>
+  <form action="/submit_registration" method="post">
+    <!-- Name -->
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <!-- Password -->
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <!-- Email -->
+    <label for="email">E-mail ID:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <!-- Phone Number -->
+    <label for="phone">Phone Number:</label>
+    <input type="text" id="phone" name="phone" required><br><br>
+
+    <!-- Sex -->
+    <label>Sex:</label>
+    <input type="radio" id="male" name="sex" value="Male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="sex" value="Female">
+    <label for="female">Female</label><br><br>
+
+    <!-- Date of Birth -->
+    <label>Date of Birth:</label>
+    <select name="dob_day">
+      <option value="">Day</option>
+      <!-- Days 1 to 31 -->
+      <script>
+        for(let i=1; i<=31; i++) {
+          document.write(`<option value="${i}">${i}</option>`);
+        }
+      </script>
+    </select>
+    <select name="dob_month">
+      <option value="">Month</option>
+      <option value="January">January</option>
+      <option value="February">February</option>
+      <option value="March">March</option>
+      <option value="April">April</option>
+      <option value="May">May</option>
+      <option value="June">June</option>
+      <option value="July">July</option>
+      <option value="August">August</option>
+      <option value="September">September</option>
+      <option value="October">October</option>
+      <option value="November">November</option>
+      <option value="December">December</option>
+    </select>
+    <select name="dob_year">
+      <option value="">Year</option>
+      <!-- Years 1950 to 2025 -->
+      <script>
+        for(let i=1950; i<=2025; i++) {
+          document.write(`<option value="${i}">${i}</option>`);
+        }
+      </script>
+    </select><br><br>
+
+    <!-- Languages Known -->
+    <label>Languages Known:</label><br>
+    <input type="checkbox" name="language" value="English"> English<br>
+    <input type="checkbox" name="language" value="Telugu"> Telugu<br>
+    <input type="checkbox" name="language" value="Hindi"> Hindi<br>
+    <input type="checkbox" name="language" value="Tamil"> Tamil<br><br>
+
+    <!-- Address -->
+    <label for="address">Address:</label><br>
+    <textarea id="address" name="address" rows="4" cols="50"></textarea><br><br>
+
+    <!-- Submit -->
+    <input type="submit" value="Register">
+  </form>
+</body>
+</html>
