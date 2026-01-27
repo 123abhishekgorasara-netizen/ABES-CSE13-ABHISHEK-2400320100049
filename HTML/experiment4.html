@@ -1,97 +1,63 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Cart Page - Web Site Name</title>
+  <title>Online Bookstore - Cart</title>
   <style>
-    /* Simple, printable/cart-like styling */
-    body { font-family: Georgia, "Times New Roman", serif; background:#f5f5f5; margin:2rem; }
-    .container { max-width: 960px; margin: 0 auto; background: #fff; border: 3px solid #333; }
-    header { border-bottom: 3px solid #333; padding: 18px 24px; display:flex; align-items:center; justify-content:space-between; }
-    .logo { font-weight:bold; font-size:1.1rem; }
-    .site-name { text-align:center; font-size:1.25rem; font-weight:700; flex:1; }
-    nav { display:flex; gap:12px; }
-    nav a { text-decoration:none; padding:10px 18px; border-left:1px solid #333; display:inline-block; }
-    .main { padding: 18px 24px; }
-    table.cart { width:100%; border-collapse:collapse; border:2px solid #444; }
-    table.cart th, table.cart td { border:1px solid #444; padding:10px 12px; text-align:left; vertical-align:middle; }
-    table.cart th { background:#eee; font-weight:700; text-align:center; }
-    .center { text-align:center; }
-    .right { text-align:right; }
-    tfoot td { font-weight:700; background:#fafafa; }
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    header { display: flex; justify-content: space-between; align-items: center; }
+    nav a { margin: 0 10px; text-decoration: none; color: #0077cc; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ccc; padding: 10px; text-align: center; }
+    th { background-color: #f2f2f2; }
+    .total-row td { font-weight: bold; background-color: #e6f7ff; }
   </style>
 </head>
 <body>
-  <div class="container" role="main" aria-label="Shopping cart example">
-    <header>
-      <div class="logo">Logo</div>
-      <div class="site-name">Web Site Name</div>
-      <nav aria-label="Top navigation">
-        <a href="#">Home</a>
-        <a href="#">Login</a>
-        <a href="#">Registration</a>
-        <a href="#">Catalogue</a>
-        <a href="#">Cart</a>
-      </nav>
-    </header>
 
-    <div class="main">
-      <table class="cart" aria-describedby="cart-description">
-        <caption id="cart-description" style="caption-side:top; text-align:left; padding:8px 0;">
-          CART PAGE: The cart page contains the details about the books which are added to the cart.
-        </caption>
-        <thead>
-          <tr>
-            <th>Dept.</th>
-            <th>Book name</th>
-            <th class="center">Price</th>
-            <th class="center">Quantity</th>
-            <th class="right">Amount</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>CSE</td>
-            <td>Book name</td>
-            <td class="center">Price</td>
-            <td class="center">Quantity</td>
-            <td class="right">Amount</td>
-          </tr>
-
-          <tr>
-            <td>ECE</td>
-            <td>Java 2</td>
-            <td class="center">$35.5</td>
-            <td class="center">2</td>
-            <td class="right">$70</td>
-          </tr>
-
-          <!-- Example empty rows / placeholders if needed -->
-          <tr>
-            <td>EEE</td>
-            <td>XML bible</td>
-            <td class="center">$40.5</td>
-            <td class="center">1</td>
-            <td class="right">$40.5</td>
-          </tr>
-
-          <tr>
-            <td>CIVIL</td>
-            <td>Total amount</td>
-            <td class="center">-$130.5</td>
-            <td class="center"></td>
-            <td class="right"></td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <td colspan="4" class="right">Grand Total</td>
-            <td class="right">$110.50</td>
-          </tr>
-        </tfoot>
-      </table>
+  <!-- Header -->
+  <header>
+    <div>
+      <img src="book logo.png" alt="Logo" height="50">
+      <span style="font-size: 24px; font-weight: bold;">Online Bookstore</span>
     </div>
-  </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Login</a>
+      <a href="#">Registration</a>
+      <a href="#">Catalogue</a>
+      <a href="#">Cart</a>
+    </nav>
+  </header>
+
+  <!-- Cart Table -->
+  <h2>Your Cart</h2>
+  <table>
+    <tr>
+      <th>Department</th>
+      <th>Book Name</th>
+      <th>Price ($)</th>
+      <th>Quantity</th>
+      <th>Amount ($)</th>
+    </tr>
+    <tr>
+      <td>ECE</td>
+      <td>Java 2</td>
+      <td>35.5</td>
+      <td>2</td>
+      <td>71.0</td>
+    </tr>
+    <tr>
+      <td>EEE</td>
+      <td>XML Bible</td>
+      <td>40.5</td>
+      <td>1</td>
+      <td>40.5</td>
+    </tr>
+    <tr class="total-row">
+      <td colspan="4">Total Amount</td>
+      <td>111.5</td>
+    </tr>
+  </table>
+
 </body>
 </html>
