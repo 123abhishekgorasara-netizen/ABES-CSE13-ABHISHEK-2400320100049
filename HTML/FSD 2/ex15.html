@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function check(){
+        var uid = document.getElementById("userid").value;
+        var pwd = document.getElementById("password").value;
+        var msg = "";
+        if(uid.length <=0 ){
+            alert("Username cannot be empty");
+        }
+        if(pwd.length <= 0){
+            alert("Password cannot be empty");
+        }
+        if(msg.length > 0){
+            alert(msg);
+        }
+        if(pwd.length < 8){
+            alert("password must be at least 8 character long");
+        }
+        if(confirm password.value= password){
+            alert("confirm password must be same as password");
+        }
+    }
+</script>
+<body>
+    
+    <form action="" method="post">
+        <label for="Username">Name:</label>
+        <input type="text" id="userid" name="username"><br><br>
+        <label for="password">password:</label>
+        <input type="password" id="password" name="password"><br><br>
+        <label for="confirm password">confirm password</label>
+        <input type="confirm password" id="confirm password" name="confirm password"><br><br>
+        <input type="submit" value="submit" onclick="check();"><br><br>
+
+    </form>
+</body>
+</html>
